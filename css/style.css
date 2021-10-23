@@ -1,6 +1,7 @@
 /*----------*/
 /*  RESETS  */
 /*----------*/
+/* https://piccalil.li/blog/a-modern-css-reset */
 /* Box sizing rules */
 *,
 *::after,
@@ -16,6 +17,7 @@ h3,
 h4,
 p,
 figure,
+picture,
 blockquote,
 dl,
 dd {
