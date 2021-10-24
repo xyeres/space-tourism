@@ -1,0 +1,142 @@
+@use '../abstracts/vars';
+
+/*------------*/
+/*  Utility   */
+/*------------*/
+
+.flex {
+  display: flex;
+  gap: vars.$gap;
+}
+
+.grid {
+  display: grid;
+  gap: vars.$gap;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 2em;
+  width: 80%;
+}
+
+.sr-only {
+  // Allows us to announce elements to screen reader
+  // users, elements that are visually obvious but need
+  // further explanation for vision-impared users
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* added line */
+  border: 0;
+}
+
+.box {
+  background: lightblue;
+  padding: 3rem;
+}
+
+/* olors */
+.bg-dark {
+  background-color: hsl(vars.$clr-dark);
+}
+
+.bg-accent {
+  background-color: hsl(vars.$clr-light);
+}
+
+.alpha20 {
+  background-color: hsl(vars.$clr-light--alpha20);
+}
+
+
+.bg-white {
+  background-color: hsl(vars.$clr-white);
+}
+
+.text-dark {
+  color: hsl(vars.$clr-dark);
+}
+
+.text-accent {
+  color: hsl(vars.$clr-light);
+}
+
+.text-white {
+  color: hsl(vars.$clr-white);
+}
+
+/* typography */
+
+.ff-serif {
+  font-family: vars.$ff-serif;
+}
+
+.ff-sans-cond {
+  font-family: vars.$ff-sans-cond;
+}
+
+.ff-sans-normal {
+  font-family: vars.$ff-sans-normal;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-900 {
+  font-size: vars.$fs-900;
+}
+
+.fs-800 {
+  font-size: vars.$fs-800;
+}
+
+.fs-700 {
+  font-size: vars.$fs-700;
+}
+
+.fs-600 {
+  font-size: vars.$fs-600;
+}
+
+.fs-500 {
+  font-size: vars.$fs-500;
+}
+
+.fs-400 {
+  font-size: vars.$fs-400;
+}
+
+.fs-300 {
+  font-size: vars.$fs-300;
+}
+
+.fs-200 {
+  font-size: vars.$fs-200;
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
+}
