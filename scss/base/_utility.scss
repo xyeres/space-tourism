@@ -14,11 +14,15 @@
   gap: vars.$gap;
 }
 
+.flow>*:where(:not(:first-child)) {
+  margin-top: vars.$flow-space;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1100px;
-  padding: 0 2em;
-  width: 80%;
+  padding: 0 4em;
+  width: 100%;
 }
 
 .sr-only {
@@ -49,10 +53,6 @@
 
 .bg-accent {
   background-color: hsl(vars.$clr-light);
-}
-
-.alpha20 {
-  background-color: hsl(vars.$clr-light--alpha20);
 }
 
 
@@ -87,7 +87,7 @@
 }
 
 .letter-spacing-1 {
-  letter-spacing: 4.75px;
+  letter-spacing: vars.$letter-spacing-1;
 }
 
 .letter-spacing-2 {
@@ -139,4 +139,19 @@
 .fs-700,
 .fs-600 {
   line-height: 1.1;
+}
+
+.numbered-title {
+  text-transform: uppercase;
+  letter-spacing: vars.$letter-spacing-1;
+  font-family: vars.$ff-sans-cond;
+  font-size: vars.$fs-500;
+  color: vars.$clr-white;
+}
+
+.numbered-title span {
+  margin-right: 0.5em;
+  letter-spacing: vars.$letter-spacing-1;
+  font-weight: 700;
+  color: hsl(vars.$clr-white--alpha25);
 }
