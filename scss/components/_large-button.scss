@@ -1,0 +1,30 @@
+@use '../abstracts/vars';
+
+.large-button {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0 2em;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: rgba(255, 255, 255, 0.25);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: opacity 200ms linear, transform 150ms ease-in;
+    opacity: 0;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scale(1.24);
+    opacity: 1;
+
+  }
+
+}
