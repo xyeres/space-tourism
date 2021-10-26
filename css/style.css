@@ -1,3 +1,6 @@
+/* colors */
+/* font-sizes */
+/* font-families */
 /*----------*/
 /*  RESETS  */
 /*----------*/
@@ -24,6 +27,16 @@ dd {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role=list],
 ol[role=list] {
@@ -37,6 +50,10 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  color: white;
+  background-color: #0c0e18;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -77,9 +94,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
-/* colors */
-/* font-sizes */
-/* font-families */
 /*------------*/
 /*  Utility   */
 /*------------*/
@@ -93,11 +107,15 @@ select {
   gap: 1rem;
 }
 
+.flow > *:where(:not(:first-child)) {
+  margin-top: 2rem;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1100px;
-  padding: 0 2em;
-  width: 80%;
+  padding: 0 4em;
+  width: 100%;
 }
 
 .sr-only {
@@ -125,10 +143,6 @@ select {
 
 .bg-accent {
   background-color: #d2d8f9;
-}
-
-.alpha20 {
-  background-color: rgba(210, 216, 249, 0.2);
 }
 
 .bg-white {
@@ -213,6 +227,54 @@ select {
 .fs-700,
 .fs-600 {
   line-height: 1.1;
+}
+
+.numbered-title {
+  text-transform: uppercase;
+  letter-spacing: 4.75px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.75rem;
+  color: 0 0% 100%;
+}
+
+.numbered-title span {
+  margin-right: 0.5em;
+  letter-spacing: 4.75px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.large-button {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0 2em;
+}
+.large-button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.25);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: opacity 200ms linear, transform 150ms ease-in;
+  opacity: 0;
+}
+.large-button:hover::after, .large-button:focus::after {
+  transform: scale(1.24);
+  opacity: 1;
+}
+
+@keyframes radiateBorder {
+  from {
+    outline: solid 48px rgba(255, 255, 255, 0.25);
+  }
+  to {
+    outline: solid 84px rgba(255, 255, 255, 0.25);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
