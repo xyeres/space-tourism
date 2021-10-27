@@ -6,6 +6,7 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
+  text-decoration: none;
   padding: 0 2em;
 
   &::after {
@@ -16,13 +17,15 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    transition: opacity 200ms linear, transform 150ms ease-in;
+    transition: opacity 200ms linear, transform 400ms ease-in;
     opacity: 0;
+    animation: 850ms infinite alternate radiateBorder;
+    animation-timing-function: ease-in;
   }
 
   &:hover::after,
   &:focus::after {
-    transform: scale(1.24);
+    transform: scale(1.15);
     opacity: 1;
 
   }
