@@ -1,0 +1,80 @@
+@use '../abstracts/vars';
+
+.primary-navigation {
+  gap: 8rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  a>span {
+    font-family: vars.$ff-sans-cond;
+    font-weight: 700;
+    padding-right: .5em;
+  }
+}
+
+.underline-indicators>* {
+  cursor: pointer;
+  padding: var(--underline-gap, 1rem) 0;
+  border: 0;
+  border-bottom: 3px solid hsl(vars.$clr-white--alpha0);
+
+  &:hover,
+  &:focus {
+    border-color: hsl(vars.$clr-white--alpha25);
+  }
+
+  &.active,
+  &[aria-selected="true"] {
+    border-color: hsl(vars.$clr-white);
+    color: hsl(vars.$clr-white);
+  }
+}
+
+.tab-list {
+  --gap: 2rem;
+}
+
+.dot-indicators>* {
+  border: 0;
+  cursor: pointer;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: .5em;
+  background-color: hsl(vars.$clr-white--alpha25);
+
+  &:hover,
+  &:focus {
+    background-color: hsl(vars.$clr-white--alpha50);
+  }
+
+  &[aria-selected="true"] {
+    background-color: hsl(vars.$clr-white);
+  }
+}
+
+.num-indicators>* {
+  border: 1px solid hsl(vars.$clr-white--alpha25);
+  cursor: pointer;
+  font-family: vars.$ff-serif;
+  font-size: 2em;
+  color: hsl(vars.$clr-white);
+  background-color: transparent;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    border-color: hsl(vars.$clr-white);
+  }
+
+  &[aria-selected="true"] {
+    color: hsl(vars.$clr-dark);
+    background-color: hsl(vars.$clr-white);
+  }
+}
