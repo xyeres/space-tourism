@@ -6,7 +6,7 @@
 
 .flex {
   display: flex;
-  gap: vars.$gap;
+  gap: var(--gap, vars.$gap);
 }
 
 .grid {
@@ -15,7 +15,7 @@
 }
 
 .flow>*:where(:not(:first-child)) {
-  margin-top: vars.$flow-space;
+  margin-top: var(--flow-space, vars.$flow-space);
 }
 
 .container {
