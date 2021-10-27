@@ -4,7 +4,9 @@ $gap: 1rem;
 $clr-dark: 230 35% 7%;
 $clr-light: 231 77% 90%;
 $clr-white: 0 0% 100%;
+$clr-white--alpha50: 0 0% 100% / .5;
 $clr-white--alpha25: 0 0% 100% / .25;
+$clr-white--alpha0: 0 0% 100% / 0;
 
 // letter spacing
 $letter-spacing-1: 4.75px;
