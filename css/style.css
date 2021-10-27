@@ -99,7 +99,7 @@ select {
 /*------------*/
 .flex {
   display: flex;
-  gap: 1rem;
+  gap: var(--gap, 1rem);
 }
 
 .grid {
@@ -108,7 +108,7 @@ select {
 }
 
 .flow > *:where(:not(:first-child)) {
-  margin-top: 2rem;
+  margin-top: var(--flow-space, 2rem);
 }
 
 .container {
@@ -250,6 +250,7 @@ select {
   border-radius: 50%;
   display: grid;
   place-items: center;
+  text-decoration: none;
   padding: 0 2em;
 }
 .large-button::after {
@@ -260,20 +261,89 @@ select {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  transition: opacity 200ms linear, transform 150ms ease-in;
+  transition: opacity 200ms linear, transform 400ms ease-in;
   opacity: 0;
+  animation: 850ms infinite alternate radiateBorder;
+  animation-timing-function: ease-in;
 }
 .large-button:hover::after, .large-button:focus::after {
-  transform: scale(1.24);
+  transform: scale(1.15);
   opacity: 1;
+}
+
+.primary-navigation {
+  gap: 8rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.primary-navigation a {
+  text-decoration: none;
+}
+.primary-navigation a > span {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  padding-right: 0.5em;
+}
+
+.underline-indicators > * {
+  cursor: pointer;
+  padding: var(--underline-gap, 1rem) 0;
+  border: 0;
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+}
+.underline-indicators > *:hover, .underline-indicators > *:focus {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.underline-indicators > *.active, .underline-indicators > *[aria-selected=true] {
+  border-color: white;
+  color: white;
+}
+
+.tab-list {
+  --gap: 2rem;
+}
+
+.dot-indicators > * {
+  border: 0;
+  cursor: pointer;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.dot-indicators > *:hover, .dot-indicators > *:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.dot-indicators > *[aria-selected=true] {
+  background-color: white;
+}
+
+.num-indicators > * {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  font-family: "Bellefair", serif;
+  font-size: 2em;
+  color: white;
+  background-color: transparent;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.num-indicators > *:hover, .num-indicators > *:focus {
+  border-color: white;
+}
+.num-indicators > *[aria-selected=true] {
+  color: #0c0e18;
+  background-color: white;
 }
 
 @keyframes radiateBorder {
   from {
-    outline: solid 48px rgba(255, 255, 255, 0.25);
+    outline: solid 10px rgba(255, 255, 255, 0.25);
   }
   to {
-    outline: solid 84px rgba(255, 255, 255, 0.25);
+    outline: solid 20px rgba(255, 255, 255, 0.25);
   }
 }
 
