@@ -102,16 +102,16 @@
         </div>
       </div>
     </section>
-    <section class="flow" id="interactive-elements">
+    <section class="flow" style="flex-basis: 100%" id="interactive-elements">
       <h2 class="numbered-title"><span>03</span> Interactive elements</h2>
 
       <!-- navigation -->
       <div>
         <nav>
-          <ul class="primary-navigation">
-            <li><a href="#">Active</a>
-            <li><a href="#">Hovered</a>
-            <li><a href="#">Idle</a>
+          <ul class="primary-navigation underline-indicators flex">
+            <li class="active"><a class="uppercase text-white letter-spacing-2" href="#"><span>01</span>Active</a>
+            <li><a class="uppercase text-white letter-spacing-2" href="#"><span>02</span>Hovered</a>
+            <li><a class="uppercase text-white letter-spacing-2" href="#"><span>03</span>Idle</a>
           </ul>
         </nav>
       </div>
@@ -122,14 +122,30 @@
           <a href="#" class="large-button uppercase ff-serif fs-600 text-dark bg-white">Explore</a>
         </div>
 
-        <div style="margin-bottom: 50vh">
+        <div class="flow" style="margin-bottom: 50vh; --flow-space:5em;">
           <!-- Tabs -->
-
+          <div class="tab-list underline-indicators flex">
+            <button aria-selected="true"
+              class="uppercase bg-dark ff-sans-cond text-accent letter-spacing-2">Mars</button>
+            <button aria-selected="false"
+              class="uppercase bg-dark ff-sans-cond text-accent letter-spacing-2">Moon</button>
+            <button aria-selected="false"
+              class="uppercase bg-dark ff-sans-cond text-accent letter-spacing-2">Europa</button>
+          </div>
 
           <!-- Dots -->
-
+          <div class="dot-indicators flex">
+            <button aria-selected="true"><span class="sr-only">Slide title</span></button>
+            <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+            <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+          </div>
 
           <!-- Numbers -->
+          <div class="num-indicators flex" style="flex-direction: column;">
+            <button aria-selected="true"><span class="sr-only">Slide title</span>1</button>
+            <button aria-selected="false"><span class="sr-only">Slide title</span>2</button>
+            <button aria-selected="false"><span class="sr-only">Slide title</span>3</button>
+          </div>
         </div>
       </div>
 
