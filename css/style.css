@@ -11,16 +11,22 @@
   --fs-200: 0.875rem;
 }
 
+@media (max-width: 35em) {
+  :root {
+    --fs-900: 5rem;
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
+  }
+}
 @media (min-width: 45em) {
   :root {
-    --fs-900: 9.375rem;
+    --fs-900: 6rem;
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
-    --fs-500: 1.75rem;
     --fs-400: 1.125rem;
-    --fs-300: 1rem;
-    --fs-200: 0.875rem;
   }
 }
 /* font-families */
@@ -81,15 +87,17 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+  background-color: #0c0e18;
+  background-size: cover;
+  background-position: bottom center;
+  color: white;
+  display: grid;
   font-family: "Barlow", sans-serif;
   font-size: --fs-400;
-  color: white;
-  background-color: #0c0e18;
+  grid-template-rows: min-content 1fr;
+  line-height: 1.5;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  display: grid;
-  grid-template-rows: min-content 1fr;
 }
 
 /* A elements that don't have a class get default styles */
@@ -140,6 +148,10 @@ select {
   gap: 1rem;
 }
 
+.d-block {
+  display: block;
+}
+
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 2rem);
 }
@@ -152,24 +164,15 @@ select {
 }
 
 .grid-container {
-  border: 5px solid greenyellow;
+  text-align: center;
   display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+}
+.grid-container * {
+  max-width: 50ch;
 }
 
-@media (min-width: 45em) {
-  .grid-container {
-    column-gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
-  }
-  .grid-container > *:first-child {
-    grid-column: 2;
-    outline: 1px solid red;
-  }
-  .grid-container > *:last-child {
-    outline: 1px solid yellow;
-    grid-column: 3;
-  }
-}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -247,7 +250,7 @@ select {
 }
 
 .fs-800 {
-  font-size: var(--fs-900);
+  font-size: var(--fs-800);
 }
 
 .fs-700 {
@@ -297,6 +300,7 @@ select {
 }
 
 .large-button {
+  font-size: 2rem;
   position: relative;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -388,6 +392,38 @@ select {
 .num-indicators > *[aria-selected=true] {
   color: #0c0e18;
   background-color: white;
+}
+
+@media (min-width: 77.5em) {
+  .grid-container {
+    text-align: left;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
+  }
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
+  }
+  .grid-container > *:first-child {
+    grid-column: 2;
+  }
+  .grid-container > *:last-child {
+    grid-column: 3;
+  }
+}
+.home {
+  background-image: url(../../assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 45em) {
+  .home {
+    background-image: url(../../assets/home/background-home-tablet.jpg);
+  }
+}
+@media (min-width: 77.5em) {
+  .home {
+    background-image: url(../../assets/home/background-home-desktop.jpg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
