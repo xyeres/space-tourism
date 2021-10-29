@@ -1,5 +1,4 @@
 @use '../abstracts/vars';
-@use '../abstracts/mixins';
 
 /*------------*/
 /*  Utility   */
@@ -15,6 +14,10 @@
   gap: vars.$gap;
 }
 
+.d-block {
+  display: block;
+}
+
 .flow>*:where(:not(:first-child)) {
   margin-top: var(--flow-space, vars.$flow-space);
 }
@@ -27,24 +30,13 @@
 }
 
 .grid-container {
-  border: 5px solid greenyellow;
+  text-align: center;
   display: grid;
-}
+  place-items: center;
+  padding-inline: 1rem;
 
-@include mixins.for-tablet-portrait-up {
-  .grid-container {
-    column-gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
-
-    &>*:first-child {
-      grid-column: 2;
-      outline: 1px solid red;
-    }
-
-    &>*:last-child {
-      outline: 1px solid yellow;
-      grid-column: 3;
-    }
+  & * {
+    max-width: 50ch;
   }
 }
 
@@ -130,7 +122,7 @@
 }
 
 .fs-800 {
-  font-size: var(--fs-900);
+  font-size: var(--fs-800);
 }
 
 .fs-700 {
