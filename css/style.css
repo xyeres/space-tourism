@@ -1,6 +1,37 @@
 /* colors */
 /* font-sizes */
+:root {
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+}
+
+@media (min-width: 45em) {
+  :root {
+    --fs-900: 9.375rem;
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+  }
+}
 /* font-families */
+@keyframes radiateBorder {
+  from {
+    outline: solid 10px rgba(255, 255, 255, 0.25);
+  }
+  to {
+    outline: solid 20px rgba(255, 255, 255, 0.25);
+  }
+}
 /*----------*/
 /*  RESETS  */
 /*----------*/
@@ -51,12 +82,14 @@ html:focus-within {
 /* Set core body defaults */
 body {
   font-family: "Barlow", sans-serif;
-  font-size: 1.125rem;
+  font-size: --fs-400;
   color: white;
   background-color: #0c0e18;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 /* A elements that don't have a class get default styles */
@@ -118,6 +151,25 @@ select {
   width: 100%;
 }
 
+.grid-container {
+  border: 5px solid greenyellow;
+  display: grid;
+}
+
+@media (min-width: 45em) {
+  .grid-container {
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+  }
+  .grid-container > *:first-child {
+    grid-column: 2;
+    outline: 1px solid red;
+  }
+  .grid-container > *:last-child {
+    outline: 1px solid yellow;
+    grid-column: 3;
+  }
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -191,35 +243,35 @@ select {
 }
 
 .fs-900 {
-  font-size: 9.375rem;
+  font-size: var(--fs-900);
 }
 
 .fs-800 {
-  font-size: 6.25rem;
+  font-size: var(--fs-900);
 }
 
 .fs-700 {
-  font-size: 3.5rem;
+  font-size: var(--fs-700);
 }
 
 .fs-600 {
-  font-size: 2rem;
+  font-size: var(--fs-600);
 }
 
 .fs-500 {
-  font-size: 1.75rem;
+  font-size: var(--fs-500);
 }
 
 .fs-400 {
-  font-size: 1.125rem;
+  font-size: var(--fs-400);
 }
 
 .fs-300 {
-  font-size: 1rem;
+  font-size: var(--fs-300);
 }
 
 .fs-200 {
-  font-size: 0.875rem;
+  font-size: var(--fs-200);
 }
 
 .fs-900,
@@ -233,7 +285,7 @@ select {
   text-transform: uppercase;
   letter-spacing: 4.75px;
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 1.75rem;
+  font-size: var(--fs-500);
   color: 0 0% 100%;
 }
 
@@ -336,15 +388,6 @@ select {
 .num-indicators > *[aria-selected=true] {
   color: #0c0e18;
   background-color: white;
-}
-
-@keyframes radiateBorder {
-  from {
-    outline: solid 10px rgba(255, 255, 255, 0.25);
-  }
-  to {
-    outline: solid 20px rgba(255, 255, 255, 0.25);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
