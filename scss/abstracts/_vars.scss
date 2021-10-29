@@ -1,3 +1,5 @@
+@use 'mixins';
+
 $gap: 1rem;
 
 /* colors */
@@ -12,14 +14,29 @@ $clr-white--alpha0: 0 0% 100% / 0;
 $letter-spacing-1: 4.75px;
 
 /* font-sizes */
-$fs-900: 9.375rem;
-$fs-800: 6.25rem;
-$fs-700: 3.5rem;
-$fs-600: 2rem;
-$fs-500: 1.75rem;
-$fs-400: 1.125rem;
-$fs-300: 1rem;
-$fs-200: 0.875rem;
+:root {
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+}
+
+@include mixins.for-tablet-portrait-up {
+  :root {
+    --fs-900: 9.375rem;
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+  }
+}
 
 /* font-families */
 $ff-serif: "Bellefair",

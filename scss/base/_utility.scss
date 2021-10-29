@@ -1,4 +1,5 @@
 @use '../abstracts/vars';
+@use '../abstracts/mixins';
 
 /*------------*/
 /*  Utility   */
@@ -23,6 +24,28 @@
   max-width: 1100px;
   padding: 0 4em;
   width: 100%;
+}
+
+.grid-container {
+  border: 5px solid greenyellow;
+  display: grid;
+}
+
+@include mixins.for-tablet-portrait-up {
+  .grid-container {
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+
+    &>*:first-child {
+      grid-column: 2;
+      outline: 1px solid red;
+    }
+
+    &>*:last-child {
+      outline: 1px solid yellow;
+      grid-column: 3;
+    }
+  }
 }
 
 .sr-only {
@@ -103,35 +126,35 @@
 }
 
 .fs-900 {
-  font-size: vars.$fs-900;
+  font-size: var(--fs-900);
 }
 
 .fs-800 {
-  font-size: vars.$fs-800;
+  font-size: var(--fs-900);
 }
 
 .fs-700 {
-  font-size: vars.$fs-700;
+  font-size: var(--fs-700);
 }
 
 .fs-600 {
-  font-size: vars.$fs-600;
+  font-size: var(--fs-600);
 }
 
 .fs-500 {
-  font-size: vars.$fs-500;
+  font-size: var(--fs-500);
 }
 
 .fs-400 {
-  font-size: vars.$fs-400;
+  font-size: var(--fs-400);
 }
 
 .fs-300 {
-  font-size: vars.$fs-300;
+  font-size: var(--fs-300);
 }
 
 .fs-200 {
-  font-size: vars.$fs-200;
+  font-size: var(--fs-200);
 }
 
 .fs-900,
@@ -145,7 +168,7 @@
   text-transform: uppercase;
   letter-spacing: vars.$letter-spacing-1;
   font-family: vars.$ff-sans-cond;
-  font-size: vars.$fs-500;
+  font-size: var(--fs-500);
   color: vars.$clr-white;
 }
 

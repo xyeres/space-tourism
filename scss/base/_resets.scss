@@ -53,12 +53,14 @@ html:focus-within {
 /* Set core body defaults */
 body {
   font-family: vars.$ff-sans-normal;
-  font-size: vars.$fs-400;
+  font-size: --fs-400;
   color: hsl(vars.$clr-white);
   background-color: hsl(vars.$clr-dark);
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 /* A elements that don't have a class get default styles */
