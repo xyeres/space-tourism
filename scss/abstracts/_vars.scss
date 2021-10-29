@@ -1,6 +1,7 @@
 @use 'mixins';
 
 $gap: 1rem;
+$flow-space: 2rem;
 
 /* colors */
 $clr-dark: 230 35% 7%;
@@ -25,16 +26,23 @@ $letter-spacing-1: 4.75px;
   --fs-200: 0.875rem;
 }
 
+@include mixins.for-phone-only {
+  :root {
+    --fs-900: 5rem;
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
+  }
+}
+
 @include mixins.for-tablet-portrait-up {
   :root {
-    --fs-900: 9.375rem;
+    --fs-900: 6rem;
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
-    --fs-500: 1.75rem;
     --fs-400: 1.125rem;
-    --fs-300: 1rem;
-    --fs-200: 0.875rem;
   }
 }
 
@@ -45,5 +53,3 @@ $ff-sans-cond: "Barlow Condensed",
 sans-serif;
 $ff-sans-normal: "Barlow",
 sans-serif;
-
-$flow-space: 2rem;
