@@ -1,11 +1,15 @@
 @use '../abstracts/vars';
+@use '../abstracts/mixins';
+
 
 .primary-navigation {
-  gap: 8rem;
   --underline-gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  background: hsl(vars.$clr-white--alpha05);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(2rem);
 
   a {
     text-decoration: none;
@@ -17,6 +21,24 @@
     padding-right: .5em;
   }
 }
+
+@include mixins.for-phone-only {
+  .primary-navigation {
+    --underline-gap: .5rem;
+    list-style: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    margin: 0;
+    padding: min(20rem, 10vh) 2rem;
+    flex-direction: column;
+  }
+
+  .primary-navigation.underline-indicators>.active {
+    border: 0;
+  }
+}
+
 
 .underline-indicators>* {
   cursor: pointer;
