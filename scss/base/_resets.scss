@@ -58,7 +58,7 @@ body {
   color: hsl(vars.$clr-white);
   display: grid;
   font-family: vars.$ff-sans-normal;
-  font-size: --fs-400;
+  font-size: var(--fs-400);
   grid-template-rows: min-content 1fr;
   line-height: 1.5;
   min-height: 100vh;
