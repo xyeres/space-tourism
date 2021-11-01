@@ -332,9 +332,14 @@ select {
   list-style: none;
   margin: 0;
   padding: 0;
-  background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(2rem);
+  background: rgba(12, 14, 24, 0.95);
+}
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(2rem);
+  }
 }
 .primary-navigation a {
   text-decoration: none;
