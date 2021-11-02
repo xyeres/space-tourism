@@ -56,6 +56,24 @@
   border: 0;
 }
 
+.skip-to-content {
+  position: absolute;
+  z-index: 9999;
+  background: hsl(vars.$clr-white);
+  color: hsl(vars.$clr-dark);
+  padding: .5em 1em;
+  margin-inline: auto;
+  transition: transform 150ms ease-in-out;
+  transform: translateY(-100%);
+
+  &:focus {
+    transform: translateY(0);
+
+  }
+}
+
+
+
 .box {
   background: lightblue;
   padding: 3rem;
