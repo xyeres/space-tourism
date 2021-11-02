@@ -4,6 +4,18 @@
   }
 }
 
+@mixin for-phone-up {
+  @media (min-width: 35em) {
+    @content;
+  }
+}
+
+@mixin medium-variation {
+  @media (min-width: 35em) and (max-width: 44.999em) {
+    @content;
+  }
+}
+
 @mixin for-tablet-portrait-up {
   @media (min-width: 45em) {
     @content;
