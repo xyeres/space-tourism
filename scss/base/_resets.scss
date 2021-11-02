@@ -63,6 +63,7 @@ body {
   line-height: 1.5;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
+  overflow-x: hidden;
 }
 
 /* A elements that don't have a class get default styles */
