@@ -1,4 +1,5 @@
 @use '../abstracts/mixins';
+@use '../abstracts/vars';
 
 .destination {
   background-image: url(../../assets/destination/background-destination-mobile.jpg);
@@ -13,5 +14,67 @@
 @include mixins.for-large-desktop-up {
   .destination {
     background-image: url(../../assets/destination/background-destination-desktop.jpg);
+  }
+}
+
+.grid-container--destination {
+  --flow-space: 2rem;
+  grid-template-areas:
+    'title'
+    'image'
+    'tabs'
+    'content'
+  ;
+
+  &>img {
+    grid-area: image;
+    max-width: 60%;
+  }
+
+  &>.tab-list {
+    grid-area: tabs;
+  }
+
+  &>.destination-info {
+    grid-area: content;
+  }
+}
+
+.destination-meta {
+  flex-direction: column;
+  border-top: 1px solid hsl(vars.$clr-white--alpha25);
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+
+  & p {
+    font-size: 1.75rem;
+  }
+}
+
+@include mixins.for-phone-up {
+  .destination-meta {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+@include mixins.for-tablet-portrait-up {
+  .grid-container--destination {
+    justify-items: start;
+    align-content: start;
+    grid-template-areas:
+      '. title title .'
+      '. image tabs .'
+      '. image content .'
+    ;
+
+    &>img {
+      max-width: 90%;
+    }
+  }
+
+  .destination-meta {
+    justify-content: start;
+    --gap: min(6vw, 6rem);
   }
 }

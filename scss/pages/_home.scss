@@ -15,3 +15,18 @@
     background-image: url(../../assets/home/background-home-desktop.jpg);
   }
 }
+
+@include mixins.for-tablet-portrait-up {
+  .grid-container--home {
+    padding-bottom: #{"max(6rem, 20vh)"};
+    align-items: end;
+
+    &>*:first-child {
+      grid-column: 2;
+    }
+
+    &>*:last-child {
+      grid-column: 3;
+    }
+  }
+}
