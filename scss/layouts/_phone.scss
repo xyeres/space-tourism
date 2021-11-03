@@ -1,0 +1,9 @@
+@use '../abstracts/mixins';
+
+@include mixins.for-phone-up {
+  .numbered-title {
+    place-self: start;
+    margin-block-start: 1rem;
+    padding-left: 2.25rem;
+  }
+}

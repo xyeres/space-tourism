@@ -1,0 +1,10 @@
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+
+@include mixins.for-tablet-portrait-up {
+  .grid-container {
+    text-align: left;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
+  }
+}
