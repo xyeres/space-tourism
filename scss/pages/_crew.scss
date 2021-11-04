@@ -72,7 +72,7 @@
 
   .grid-container--crew {
     align-items: start;
-
+    justify-items: start;
     grid-template-areas:
       '. title title .'
       '. content image .'
