@@ -2,14 +2,13 @@
 
 @include mixins.for-phone-up {
   .numbered-title {
-    place-self: start;
-    margin-block-start: 1rem;
-
+    margin-block-start: 2rem;
   }
 }
 
 @include mixins.medium-variation {
   .numbered-title {
     padding-left: 2.25rem;
+    margin: 3rem 0;
   }
 }
