@@ -7,4 +7,8 @@
     column-gap: var(--container-gap, 2rem);
     grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
   }
+
+  .numbered-title {
+    place-self: start;
+  }
 }
