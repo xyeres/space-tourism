@@ -1,3 +1,4 @@
+@use '../abstracts/vars';
 @use '../abstracts/mixins';
 
 .crew {
@@ -13,5 +14,77 @@
 @include mixins.for-large-desktop-up {
   .crew {
     background-image: url(../../assets/crew/background-crew-desktop.jpg);
+  }
+}
+
+.crew-img {
+  grid-area: image;
+  display: grid;
+  place-items: center;
+  border-bottom: 1px solid hsl(vars.$clr-white--alpha50);
+}
+
+.crew-title {
+  color: hsl(vars.$clr-white--alpha50);
+}
+
+.grid-container--crew {
+  --flow-space: 2rem;
+  grid-template-areas:
+    'title'
+    'image'
+    'dots'
+    'content'
+  ;
+
+  &>.crew-info {
+    grid-area: content;
+  }
+
+  &>.crew-dots {
+    grid-area: dots;
+  }
+
+  & picture {
+    max-width: 60%;
+  }
+}
+
+@include mixins.for-phone-up {
+  .grid-container--crew {
+    padding-bottom: 0px;
+    grid-template-areas:
+      'title'
+      'content'
+      'dots'
+      'image'
+    ;
+  }
+
+  .crew-img {
+    border: none;
+    align-self: end;
+  }
+}
+
+@include mixins.for-tablet-portrait-up {
+
+
+  .grid-container--crew {
+    align-items: start;
+
+    grid-template-areas:
+      '. title title .'
+      '. content image .'
+      '. dots image .'
+    ;
+
+    & picture {
+      max-width: 90%;
+    }
+  }
+
+  .crew-dots {
+    justify-self: start;
   }
 }
