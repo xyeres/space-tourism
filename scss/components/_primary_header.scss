@@ -124,12 +124,13 @@
   }
 }
 
-
 .underline-indicators>* {
   cursor: pointer;
-  padding: var(--underline-gap, 1rem) 0;
+  padding: var(--underline-gap, .5rem) 0;
   border: 0;
   border-bottom: 3px solid hsl(vars.$clr-white--alpha0);
+  background: transparent;
+
 
   &:hover,
   &:focus {
