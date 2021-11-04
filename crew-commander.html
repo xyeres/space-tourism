@@ -41,25 +41,31 @@
       </ul>
     </nav>
   </header>
-  <main id="main" class="grid-container-- grid-container--crew flow">
+  <main id="main" class="grid-container grid-container--crew flow">
     <h1 class="numbered-title"><span aria-hidden="true">02</span>Meet your crew</h1>
-    <img alt="crew member" src="./assets/crew/image-douglas-hurley.png" />
-    <article class="crew-info">
-      <span class="uppercase ff-serif fs-600">Commander</span>
-      <span class="uppercase ff-serif fs-700">Douglas Hurley
-      </span>
+    <!-- Dots -->
+    <div class="crew-dots dot-indicators flex">
+      <button aria-selected="true"><span class="sr-only">The commander</span></button>
+      <button aria-selected="false"><span class="sr-only">The mission specialist</span></button>
+      <button aria-selected="false"><span class="sr-only">The pilot</span></button>
+      <button aria-selected="false"><span class="sr-only">The crew engineer</span></button>
+    </div>
+    <article class="flow crew-info">
+      <header class="flow flow--space-small">
+        <h2 class="crew-title uppercase ff-serif fs-600">Commander</h2>
+        <p class="uppercase ff-serif fs-700">Douglas Hurley</p>
+      </header>
       <p>
         Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
         and former NASA astronaut. He launched into space for the third time as
         commander of Crew Dragon Demo-2.
       </p>
-      <!-- Dots -->
-      <div class="dot-indicators flex">
-        <button aria-selected="true"><span class="sr-only">Slide title</span></button>
-        <button aria-selected="false"><span class="sr-only">Slide title</span></button>
-        <button aria-selected="false"><span class="sr-only">Slide title</span></button>
-      </div>
     </article>
+    <picture class="crew-img">
+      <source srcset="./assets/crew/image-douglas-hurley.webp">
+      <img alt="crew member" src="./assets/crew/image-douglas-hurley.png" />
+    </picture>
+
   </main>
 
 </body>
