@@ -4,6 +4,12 @@
   .numbered-title {
     place-self: start;
     margin-block-start: 1rem;
+
+  }
+}
+
+@include mixins.medium-variation {
+  .numbered-title {
     padding-left: 2.25rem;
   }
 }
