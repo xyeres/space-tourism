@@ -1,3 +1,17 @@
+@use '../abstracts/vars';
+
 .numbered-title {
   grid-area: title;
+  text-transform: uppercase;
+  letter-spacing: vars.$letter-spacing-1;
+  font-family: vars.$ff-sans-cond;
+  font-size: var(--fs-500);
+  color: vars.$clr-white;
+}
+
+.numbered-title span {
+  margin-right: 0.5em;
+  letter-spacing: vars.$letter-spacing-1;
+  font-weight: 700;
+  color: hsl(vars.$clr-white--alpha25);
 }
