@@ -19,8 +19,8 @@
 
 .crew-img {
   grid-area: image;
-  display: grid;
-  place-items: center;
+  // display: grid;
+  // place-items: center;
   border-bottom: 1px solid hsl(vars.$clr-white--alpha50);
 }
 
@@ -38,15 +38,18 @@
   ;
 
   &>.crew-info {
+    align-self: start;
     grid-area: content;
   }
 
   &>.crew-dots {
+    align-self: center;
     grid-area: dots;
   }
 
   & picture {
     max-width: 60%;
+    align-self: end;
   }
 }
 
@@ -68,10 +71,8 @@
 }
 
 @include mixins.for-tablet-portrait-up {
-
-
   .grid-container--crew {
-    align-items: start;
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 32rem) minmax(0, 28rem) minmax(1rem, 1fr);
     justify-items: start;
     grid-template-areas:
       '. title title .'
@@ -79,8 +80,10 @@
       '. dots image .'
     ;
 
-    & picture {
-      max-width: 90%;
+    &>picture {
+      grid-column: span;
+      align-self: end;
+      max-width: 100%;
     }
   }
 

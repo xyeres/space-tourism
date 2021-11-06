@@ -29,6 +29,7 @@
   &>picture {
     grid-area: image;
     max-width: 60%;
+    align-self: center;
   }
 
   &>.tab-list {
