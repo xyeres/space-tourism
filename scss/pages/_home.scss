@@ -31,7 +31,7 @@
   }
 }
 
-@include mixins.for-large-desktop-up {
+@include mixins.for-very-tall-desktop-up {
   .grid-container--home {
     align-items: center;
   }
