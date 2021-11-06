@@ -27,3 +27,9 @@
     @content;
   }
 }
+
+@mixin for-very-tall-desktop-up {
+  @media (min-height: 67.5em) {
+    @content;
+  }
+}
