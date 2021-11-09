@@ -36,6 +36,8 @@
     'dots'
     'content'
   ;
+  align-content: start;
+
 
   &>.crew-info {
     align-self: start;
@@ -43,7 +45,7 @@
   }
 
   &>.crew-dots {
-    align-self: center;
+    align-self: end;
     grid-area: dots;
   }
 
