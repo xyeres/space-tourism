@@ -430,7 +430,7 @@ select {
     right: 2rem;
     top: 2rem;
     background: transparent;
-    background-image: url(../../assets/shared/icon-hamburger.svg);
+    background-image: url(../assets/shared/icon-hamburger.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 1.5rem;
@@ -439,7 +439,7 @@ select {
     transition: background-image 160ms ease-in;
   }
   .mobile-nav-toggle[aria-expanded=true] {
-    background-image: url(../../assets/shared/icon-close.svg);
+    background-image: url(../assets/shared/icon-close.svg);
   }
   .mobile-nav-toggle:focus-visible {
     outline: 5px solid red;
