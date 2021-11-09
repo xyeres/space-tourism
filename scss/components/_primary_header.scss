@@ -170,10 +170,13 @@
   border: 1px solid hsl(vars.$clr-white--alpha25);
   cursor: pointer;
   font-family: vars.$ff-serif;
-  font-size: 2em;
+  font-size: 1.75em;
+  width: #{"clamp(3rem, 2.5vw, 4.7rem)"};
+  height: #{"clamp(3rem, 2.5vw, 4.7rem)"};
+  display: grid;
+  place-items: center;
   color: hsl(vars.$clr-white);
   background-color: transparent;
-  aspect-ratio: 1;
   border-radius: 50%;
 
   &:hover,
