@@ -7,7 +7,7 @@ The Live Site can be viewed here: [Live Demo](https://xyeres.github.io/space-tou
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshot](#another-screenshot)
   - [Links](#links)
 - [Built with](#built-with)
 
