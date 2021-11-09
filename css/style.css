@@ -514,10 +514,13 @@ select {
   border: 1px solid rgba(255, 255, 255, 0.25);
   cursor: pointer;
   font-family: "Bellefair", serif;
-  font-size: 2em;
+  font-size: 1.75em;
+  width: clamp(3rem, 2.5vw, 4.7rem);
+  height: clamp(3rem, 2.5vw, 4.7rem);
+  display: grid;
+  place-items: center;
   color: white;
   background-color: transparent;
-  aspect-ratio: 1;
   border-radius: 50%;
 }
 .num-indicators > *:hover, .num-indicators > *:focus {
@@ -668,13 +671,14 @@ select {
 .grid-container--crew {
   --flow-space: 2rem;
   grid-template-areas: "title" "image" "dots" "content";
+  align-content: start;
 }
 .grid-container--crew > .crew-info {
   align-self: start;
   grid-area: content;
 }
 .grid-container--crew > .crew-dots {
-  align-self: center;
+  align-self: end;
   grid-area: dots;
 }
 .grid-container--crew picture {
@@ -707,6 +711,75 @@ select {
 
   .crew-dots {
     justify-self: start;
+  }
+}
+.tech {
+  background-image: url(../../assets/technology/background-technology-mobile.jpg);
+}
+
+.img-not-mobile {
+  display: none;
+}
+
+@media (min-width: 45em) {
+  .tech {
+    background-image: url(../../assets/technology/background-technology-tablet.jpg);
+  }
+
+  .img-mobile {
+    display: none;
+  }
+
+  .img-not-mobile {
+    display: block;
+  }
+}
+@media (min-width: 77.5em) {
+  .tech {
+    background-image: url(../../assets/technology/background-technology-desktop.jpg);
+  }
+}
+.grid-container--tech {
+  --flow-space: 2rem;
+  grid-template-areas: "title" "image" "tabs" "content";
+  align-content: start;
+}
+.grid-container--tech > picture {
+  grid-area: image;
+  max-width: 100%;
+  align-self: center;
+}
+.grid-container--tech > .num-list {
+  justify-self: center;
+  grid-area: tabs;
+}
+.grid-container--tech > .tech-info {
+  grid-area: content;
+}
+
+@media (min-width: 45em) {
+  .num-list {
+    flex-direction: column;
+  }
+
+  .grid-container--tech {
+    place-items: start;
+    align-content: start;
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 4rem) minmax(0, 24.5rem) minmax(0, 25.5rem) minmax(1rem, 1fr);
+    grid-template-areas: ". title title . ." ". tabs content image image" ". tabs content image image";
+    grid-row-start: span;
+  }
+  .grid-container--tech > picture {
+    max-width: 90%;
+  }
+  .grid-container--tech > .num-list {
+    justify-self: start;
+  }
+  .grid-container--tech > .tech-info {
+    align-self: start;
+  }
+  .grid-container--tech > .numbered-title {
+    margin-bottom: 3rem;
   }
 }
 
