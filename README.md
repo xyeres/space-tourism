@@ -2,6 +2,7 @@
 Multipage site built from scratch using CSS Grid, Flexbox, semantic, screen-reader friendly HTML, and JavaScript 
 The Live Site can be viewed here: [Live Demo](https://xyeres.github.io/space-tourism)
 
+[![](./screenshot.jpg)](https://xyeres.github.io/space-tourism)
 ## Table of contents
 
 - [Overview](#overview)
@@ -20,10 +21,8 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - View each page and be able to toggle between the tabs to see new information
 
-### Screenshots 
-
-![](./screenshot.jpg)
-![](./screenshot-1.jpg)
+### Another Screenshot 
+[![](./screenshot-1.jpg)](https://xyeres.github.io/space-tourism)
 
 ### Links
 - Live Site URL: [Live Demo](https://xyeres.github.io/space-tourism)
