@@ -2,18 +2,18 @@
 @use '../abstracts/vars';
 
 .destination {
-  background-image: url(../../assets/destination/background-destination-mobile.jpg);
+  background-image: url(../assets/destination/background-destination-mobile.jpg);
 }
 
 @include mixins.for-tablet-portrait-up {
   .destination {
-    background-image: url(../../assets/destination/background-destination-tablet.jpg);
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
   }
 }
 
 @include mixins.for-large-desktop-up {
   .destination {
-    background-image: url(../../assets/destination/background-destination-desktop.jpg);
+    background-image: url(../assets/destination/background-destination-desktop.jpg);
   }
 }
 

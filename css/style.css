@@ -554,17 +554,17 @@ select {
   }
 }
 .home {
-  background-image: url(../../assets/home/background-home-mobile.jpg);
+  background-image: url(../assets/home/background-home-mobile.jpg);
 }
 
 @media (min-width: 45em) {
   .home {
-    background-image: url(../../assets/home/background-home-tablet.jpg);
+    background-image: url(../assets/home/background-home-tablet.jpg);
   }
 }
 @media (min-width: 77.5em) {
   .home {
-    background-image: url(../../assets/home/background-home-desktop.jpg);
+    background-image: url(../assets/home/background-home-desktop.jpg);
   }
 }
 @media (min-width: 45em) {
@@ -585,17 +585,17 @@ select {
   }
 }
 .destination {
-  background-image: url(../../assets/destination/background-destination-mobile.jpg);
+  background-image: url(../assets/destination/background-destination-mobile.jpg);
 }
 
 @media (min-width: 45em) {
   .destination {
-    background-image: url(../../assets/destination/background-destination-tablet.jpg);
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
   }
 }
 @media (min-width: 77.5em) {
   .destination {
-    background-image: url(../../assets/destination/background-destination-desktop.jpg);
+    background-image: url(../assets/destination/background-destination-desktop.jpg);
   }
 }
 .grid-container--destination {
@@ -646,17 +646,17 @@ select {
   }
 }
 .crew {
-  background-image: url(../../assets/crew/background-crew-mobile.jpg);
+  background-image: url(../assets/crew/background-crew-mobile.jpg);
 }
 
 @media (min-width: 45em) {
   .crew {
-    background-image: url(../../assets/crew/background-crew-tablet.jpg);
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
   }
 }
 @media (min-width: 77.5em) {
   .crew {
-    background-image: url(../../assets/crew/background-crew-desktop.jpg);
+    background-image: url(../assets/crew/background-crew-desktop.jpg);
   }
 }
 .crew-img {
@@ -714,7 +714,7 @@ select {
   }
 }
 .tech {
-  background-image: url(../../assets/technology/background-technology-mobile.jpg);
+  background-image: url(../assets/technology/background-technology-mobile.jpg);
 }
 
 .img-not-mobile {
@@ -723,7 +723,7 @@ select {
 
 @media (min-width: 45em) {
   .tech {
-    background-image: url(../../assets/technology/background-technology-tablet.jpg);
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
   }
 
   .img-mobile {
@@ -736,7 +736,7 @@ select {
 }
 @media (min-width: 77.5em) {
   .tech {
-    background-image: url(../../assets/technology/background-technology-desktop.jpg);
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
   }
 }
 .grid-container--tech {

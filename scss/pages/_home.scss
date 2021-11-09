@@ -1,18 +1,18 @@
 @use '../abstracts/mixins';
 
 .home {
-  background-image: url(../../assets/home/background-home-mobile.jpg);
+  background-image: url(../assets/home/background-home-mobile.jpg);
 }
 
 @include mixins.for-tablet-portrait-up {
   .home {
-    background-image: url(../../assets/home/background-home-tablet.jpg);
+    background-image: url(../assets/home/background-home-tablet.jpg);
   }
 }
 
 @include mixins.for-large-desktop-up {
   .home {
-    background-image: url(../../assets/home/background-home-desktop.jpg);
+    background-image: url(../assets/home/background-home-desktop.jpg);
   }
 }
 
